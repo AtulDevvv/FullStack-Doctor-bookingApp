@@ -6,7 +6,7 @@ import 'dotenv/config'
 import adminRouter from './routes/adminRoute.js'
 import doctorsRouter from './routes/doctorRoute.js'
 import userRouter from './routes/userRoute.js'
-// const https = require("https");
+
 
 
 const app=express()
@@ -17,11 +17,11 @@ connectCloudinary()
 app.use(cors())
 app.use(express.json())
 
-// https.globalAgent.options.secureProtocol = "TLSv1_2_method";
 
 
 
- //api endpoints
+
+
  app.use('/api/admin',adminRouter)
  app.use('/api/doctor',doctorsRouter)
 app.use('/api/user',userRouter)
